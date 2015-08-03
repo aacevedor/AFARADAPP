@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html ng-app="MainModule">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../components/loader.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="../css/app.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    
+    <script src="../js/connect.js"></script>
+    <script src="../components/loader.js"></script>
+    <script>
+        //
+        // TODO: Write JavaScript code here
+        //
+    </script>
+</head> 
+<body id="stage" class="theme" ng-controller="ContentController">
+    <header data-role="header" data-position="fixed">
+        <h1></h1>
+    </header>
+      <section ng-controller="SectionController" class="content-app" data-role="content">
+        {{InfoObj}}
+        
+       </section>
+
+    <footer>
+        <div data-role="footer" data-id="foo1" data-position="fixed" class="ui-footer ui-bar-a ui-footer-fixed slideup ui-fixed-hidden" role="contentinfo">
+            <div data-role="navbar" class="ui-navbar ui-mini" role="navigation">
+                <ul class="ui-grid-c">
+                    <li class="ui-block-a"><a href="../index.html" data-prefetch="true" data-transition="slideup" class="ui-btn-active ui-state-persist ui-btn ui-btn-inline ui-btn-up-a" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true"><span class="ui-btn-inner"><span class="ui-btn-text">Inicio</span></span></a></li>
+                    <li class="ui-block-b"><a href="miscitas.html" data-prefetch="true" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true" class="ui-btn ui-btn-inline ui-btn-up-a"><span class="ui-btn-inner"><span class="ui-btn-text">Citas</span></span></a></li>
+                    <li class="ui-block-c"><a href="perfil.html" data-prefetch="true" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline"><span class="ui-btn-inner"><span class="ui-btn-text">Perfil</span></span></a></li>
+                    <li class="ui-block-d"><a href="conf.html" data-prefetch="true" data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-theme="a" data-inline="true" class="ui-btn ui-btn-up-a ui-btn-inline"><span class="ui-btn-inner"><span class="ui-btn-text">Configuracion</span></span></a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+    </footer>
+    <script src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/content.js"></script>
+ </body>
+
+
+</html>

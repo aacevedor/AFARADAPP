@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script type="text/javascript" charset="utf-8" src="../components/loader.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+        window.alert("Cargando Contenido");
+    }
+
+    function createDB(){
+        var db = window.openDatabase("Database", "1.0", "SessionUser", 200000);
+        db.transaction(executeQuery, errorCB, successCB);
+ 
+    }
+
+    function executeQuery(tx) {
+        tx.executeSql('DROP TABLE IF EXISTS SessionUser');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS SessionUser (id unique,iduser,name,data)');
+        tx.executeSql('INSERT INTO SessionUser (id,iduser,name,data) VALUES (1, "55a30aaa1b27793e3b86137e","Ariel Acevedo","2015-07-13T00:47:38.927Z")');
+    }
+
+    function queryDB(tx) {
+        tx.executeSql('SELECT * FROM SessionUser', [], querySuccess, errorCB);
+    }
+
+    function querySuccess(tx, results) {
+        var len = results.rows.length;
+        window.alert("There are " + len + " rows of records in the database.");
+        for (var i=0; i<len; i++){
+            document.writeln("row = " + i + " ID = " + results.rows.item(i).id + " Data = " + results.rows.item(i).data +"idUser "+results.rows.item(i).iduser + " name"+ results.rows.item(i).name);
+        }        
+    }
+
+    //Callback function when the transaction is failed.
+    function errorCB(err) {
+        console.log("Error occured while executing SQL: "+err.code);
+    }
+
+    // Callback function when the transaction is success.
+    function successCB() {
+        var db = window.openDatabase("Database", "1.0", "SessionUser", 200000);
+        db.transaction(queryDB, errorCB);
+    }
+   
+    function GetUsers(){
+        var db = window.openDatabase("Database", "1.0", "SessionUser", 200000);
+        db.transaction(get_users,errorCB);
+    }
+    function get_users(tx){
+        tx.executeSql('SELECT * FROM SessionUser', [], querySuccess, errorCB);
+    }
+    function DBExist(){
+        var db = window.openDatabase("Database", "1.0", "SessionUser", 200000);
+        db.transaction(get_database,errorCB);
+    }
+    function get_database(tx){
+        tx.executeSql('CREATE TABLE IF NOT EXISTS SessionUser (id unique,iduser,name,data)',[], sql_ok, errorCB);
+    }
+    function sql_ok(tx,results){
+        
+    }
+    </script>
+  </head>
+  <body>
+  <h1>Execute the SQL</h1>
+  <input type="button" value="Execute SQL transactions" onclick="createDB()">
+  <input type="button" value="Execute SQL transactions" onclick="GetUsers()">
+  <input type="button" value="Execute SQL transactions" onclick="DBExist()">
+
+
+   </body>
+  </html>

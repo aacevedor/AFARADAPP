@@ -1,0 +1,229 @@
+/* @file
+ * This file is a custom file that loads all files. Each non-base layer
+ * can be disabled.
+ *
+ * Do not name this file, "app.scss". If you run a compass update this file can
+ * be wiped out with a compass update. By default, when a compass project is
+ * created the file will be named app.scss. Thus this file is named,
+ * THEMENAME.scss.
+ *
+ * This application file (THEMENAME.scss) is where all the partials are
+ * imported.
+ *
+ * Theme styles are categorized using SMACSS standards. They utilize
+ * categorization of styles into various categories. Those categories are the
+ * following:
+ *
+ * - Base: CSS reset/normalize plus HTML element styling.
+ * - Layout: Macro arrangement of a web page, including any grid systems.
+ * - Component: Dictate minor layout modules or reusable elements.
+ * - State: Describe the appearance of a module in various states.
+ * - Theme: Purely visual optional styling ("look-and-feel") for a component.
+ *
+ * For more information about this new Drupal css file standard, please review
+ * the following:
+ * - https://drupal.org/node/1887922
+ * - http://smacss.com/
+ */
+body {
+  margin: 0;
+  padding: 10px;
+  background-color: #ccc;
+  font-family: 'Helvetica'; }
+
+h1 {
+  text-shadow: 0 -2px 0 #999;
+  text-align: center;
+  font-size: 40px;
+  padding: 0;
+  margin: 200px 0 30px 0;
+  color: white; }
+
+/**
+ * Large Button Component
+ * http://components.onsenui.io/
+ */
+.button--large {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  height: auto;
+  text-decoration: none;
+  padding: 4px 20px;
+  font-size: 16px;
+  line-height: 36px;
+  letter-spacing: 0;
+  color: #fff;
+  text-shadow: 0 1px none;
+  vertical-align: middle;
+  background-color: #1284ff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  -moz-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  -o-transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear, opacity 0.2s linear;
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+  padding: 4px 20px;
+  display: block;
+  width: 100%; }
+
+.button--large:active {
+  background-color: #1284ff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #fff;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+  opacity: 0.6;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none; }
+
+.button--large:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none; }
+
+.button--large:hover {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none; }
+
+.button--large:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0; }
+
+/****************************************************/
+/* azul clarito : #55E0F9;
+/*fondo : #fff;
+/*
+/****************************************************/
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+.theme {
+  background: #fff; }
+
+header {
+  text-align: center;
+  color: #fff;
+  background-color: #55E0F9; }
+
+header h1 {
+  margin: 0;
+  padding: 12px; }
+
+h1 {
+  font-weight: normal;
+  text-transform: uppercase; }
+
+.content-left {
+  width: auto;
+  margin: 0 5px; }
+
+span.ui-btn-inner.ui-btn-corner-all.registrer {
+  width: 45px;
+  height: 10px;
+  font-size: 5px; }
+
+label.text-registrer {
+  float: left;
+  font-size: 13px;
+  margin: 0 5px 0 0; }
+
+.content-rigth {
+  width: 45%;
+  margin: 0 auto; }
+
+input#basic:focus {
+  background-color: rgba(252, 186, 14, 0.63); }
+
+span.ui-btn-inner.ui-btn-corner-all {
+  background-color: #5BB75B;
+  color: #fff;
+  font-weight: 100; }
+
+.ui-shadow {
+  box-shadow: 0 1px 4px rgba(0, 242, 0, 0.61) !important; }
+
+.ui-btn-up-c {
+  /*border: 1px solid rgba(198, 237, 18, 0.46)!important;*/
+  background: rgba(25, 245, 45, 0) !important; }
+
+.block-content {
+  width: 90%;
+  margin: 0 auto;
+  position: relative; }
+
+section {
+  display: inline-block;
+  width: 100%; }
+
+.login-session {
+  margin-top: 50px; }
+
+footer .ui-btn-up-a {
+  /*background-image: linear-gradient( #118E9E,#21E1E8 )!important;*/ }
+
+a#RegisterBtn {
+  margin: 15px 0; }
+
+span.ui-btn-inner.ui-btn-corner-all.registrer {
+  text-shadow: none; }
+
+.ui-btn-text {
+  font-family: 'Open Sans', sans-serif; }
+
+.ui-content {
+  padding: 0 !important; }
+
+.ui-shadow.registrer {
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0) !important; }
+
+.ui-btn-up-c.registrer {
+  border: none !important; }
+
+.ariel {
+  background: transparent url("image.png") left top no-repeat; }
+
+.ariel1 {
+  background: transparent url("image.png") left top no-repeat; }
+
+/*# sourceMappingURL=app.css.map */
